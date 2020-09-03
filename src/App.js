@@ -10,7 +10,7 @@ function App() {
   const [input, setInput] = useState("");
   // quering from firebase
   useEffect(() => {
-    db.collection('tasks').onSnapshot(snapshot => {
+    db.collection('tasks').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
       // console.log(snapshot.docs.map(doc => doc.data()));
       setTodos(snapshot.docs.map(doc => doc.data()));
     });
