@@ -28,7 +28,7 @@ function App() {
   };
   return (
     <div className="App">
-      <form>
+      <form className="form">
         <FormControl>
           <InputLabel>Write a new To Do item</InputLabel>
           <Input
@@ -46,11 +46,13 @@ function App() {
           Add To-Do
         </Button>
       </form>
-
-      <ul>
+      <hr/>
+      <ul className="ul">
         {todos.map((todo) => (
           <Todo todo={todo} />
+          
         ))}
+        
       </ul>
     </div>
   );
