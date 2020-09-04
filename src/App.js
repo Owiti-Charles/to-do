@@ -28,7 +28,6 @@ function App() {
   };
   return (
     <div className="App">
-      <h2>home</h2>
       <form>
         <FormControl>
           <InputLabel>Write a new To Do item</InputLabel>
